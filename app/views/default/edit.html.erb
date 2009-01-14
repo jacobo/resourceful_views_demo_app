@@ -1,0 +1,14 @@
+<h1>Editing <%=current_model.name%></h1>
+
+<% form_for(current_object) do |f| %>
+  <%= f.error_messages %>
+
+  <%=get_content_for('fields')%>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', current_object %> |
+<%= link_to 'Back', url_for(:action => 'index') %>

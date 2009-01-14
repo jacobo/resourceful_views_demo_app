@@ -1,0 +1,6 @@
+<%current_model.content_columns.each do |col| %>
+	<p>
+	  <%= label(current_model.name.underscore, col.name) %><br />
+	  <%= text_field(current_model.name.underscore, col.name) %>
+	</p>
+<% end %>

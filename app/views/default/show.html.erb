@@ -1,0 +1,10 @@
+<%current_model.content_columns.each do |col| %>
+	<p>
+	  <b><%= col.human_name %>: </b>
+	  <%= current_object.send col.name %>
+	</p>
+<% end %>
+
+
+<%= link_to 'Edit', url_for(:action => 'edit', :id => current_object) %> |
+<%= link_to 'Back', url_for(:action => 'index') %>
