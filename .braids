@@ -20,3 +20,10 @@ vendor/plugins/make_resourceful:
   revision: 8a794504ce7c849fe54416d1afa2e42048281470
   branch: master
   remote: braid/vendor/plugins/make-resourceful
+vendor/plugins/resource_this: 
+  squashed: true
+  url: git://github.com/jnewland/resource_this.git
+  type: git
+  revision: 3a1de80887b7a2323b61989209916c90d7fb7bd3
+  branch: master
+  remote: braid/vendor/plugins/resource-this
