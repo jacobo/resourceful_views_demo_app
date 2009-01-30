@@ -1,4 +1,11 @@
 --- 
+vendor/plugins/resources_controller: 
+  squashed: true
+  url: git://github.com/ianwhite/resources_controller.git
+  type: git
+  revision: 4a26949fd713a05e5a4b0c1f5a7a8def0fe5ea9d
+  branch: master
+  remote: braid/vendor/plugins/resources-controller
 vendor/plugins/resource_controller: 
   squashed: true
   url: git://github.com/giraffesoft/resource_controller.git
