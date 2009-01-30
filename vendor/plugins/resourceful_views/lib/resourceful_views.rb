@@ -79,7 +79,7 @@ module ResourcefulViews
   # * default folder
   # * nil
   #
-  def self.determine_view_path(controller, action, theme_given_explicitly = false)# :yields: base_path, file_name
+  def self.determine_view_path(controller, action, theme_given_explicitly = false, &block)# :yields: base_path, file_name
     controller_name = controller.class.controller_path
     action = action.to_s
     theme = nil
@@ -88,6 +88,12 @@ module ResourcefulViews
     elsif controller.respond_to?(:resourceful_views_theme)
         theme = controller.resourceful_views_theme(action)
     end
+    determine_view_path_from_parts([controller_name, action], theme, &block)
+  end
+  
+  def self.determine_view_path_from_parts(parts, theme = nil)
+    controller_name = parts.first
+    action = parts.last
     if( yield "#{controller_name}", "#{action}" )
       return "#{controller_name}/#{action}"
     elsif( theme && yield("themes/#{theme}", "#{action}") )
@@ -96,7 +102,7 @@ module ResourcefulViews
       return "default/#{action}"
     else
       return nil
-    end
+    end    
   end
   
 end
