@@ -1,1 +1,15 @@
-This is a demo app for the resourceful_views rails plugin (http://github.com/brontes3d/resourceful_views)
+This is a demo app for the resourceful_views rails plugin ( http://github.com/brontes3d/resourceful_views )
+
+Using Braid to manage plugins: 
+	sudo gem install braid
+	
+	
+---
+
+I had to upgrade git:
+
+	curl http://kernel.org/pub/software/scm/git/git-1.6.1.tar.bz2 | tar xj
+	configre, make, make install
+	
+	in /usr/local/bin
+	ls | grep git | xargs rm
