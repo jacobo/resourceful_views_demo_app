@@ -1,6 +1,9 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :posts
   map.resources :blogpfosten
+  map.resources :poteaux
+  map.resources :alberini
+  map.resources :bornes
 
   # The priority is based upon order of creation: first created -> highest priority.
 
