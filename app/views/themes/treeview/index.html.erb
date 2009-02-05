@@ -1,0 +1,22 @@
+<% content_for('title') do %>
+	<%=current_model.name.titleize%>
+<% end %>
+
+
+<div class="yui-gd">
+
+	<div class="yui-g first">
+
+<%= get_content_for('listing') %>
+
+	</div>
+
+	<div class="yui-g" id="details_panel">
+		
+		<%default_content_for(:edit_instructions){ %>
+			&larr; Select a <%=current_model.name.titleize%> to edit
+		<%}%>
+		
+	</div>
+
+</div>

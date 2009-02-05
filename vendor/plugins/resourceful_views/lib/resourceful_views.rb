@@ -86,7 +86,7 @@ module ResourcefulViews
     if theme_given_explicitly
       theme = theme_given_explicitly
     elsif controller.respond_to?(:resourceful_views_theme)
-        theme = controller.resourceful_views_theme(action)
+      theme = controller.resourceful_views_theme(action)
     end
     determine_view_path_from_parts([controller_name, action], theme, &block)
   end

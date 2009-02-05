@@ -1,0 +1,33 @@
+<%=get_content_for('listing_header')%>
+
+Search: <input type="text" id="search_input">
+
+<%=get_content_for('treeview_top_links')%>
+
+<br/><br/>
+
+<div style="height: 500px; overflow: scroll; border: 1px solid #000">
+	<div id="tree_view">
+		<% current_objects.each do |obj| %>
+			<div class="tree_view_item">
+				<%=current_model.name.humanize%> 
+				<%=link_to obj.object_name, url_for(:action => 'edit', :id => obj) %>
+			</div>
+		<% end %>
+	</div>
+</div>
+
+<br/><br/>
+
+<%=get_content_for('treeview_bottom_links')%>
+
+<script type="text/javascript">
+	$$('#tree_view .tree_view_item a').each(function(link){
+		link.onclick = function(){
+			
+			return false;
+		}
+		console.log("link: " + link.href);
+		
+	});
+</script>
